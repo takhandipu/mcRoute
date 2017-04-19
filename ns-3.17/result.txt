@@ -1,0 +1,24 @@
+Creating 10 primary user nodes.
+Creating 30 secondary user nodes.
+Starting simulation for 10 s ...
+37.182 +0.00171062974013039264 0.0546956 
+Creating 12 primary user nodes.
+Creating 30 secondary user nodes.
+Starting simulation for 10 s ...
+39.118 +0.00309085285323530747 0.0616438 
+Creating 14 primary user nodes.
+Creating 30 secondary user nodes.
+Starting simulation for 10 s ...
+38.0083 +0.00225287706683189623 0.0655412 
+Creating 16 primary user nodes.
+Creating 30 secondary user nodes.
+Starting simulation for 10 s ...
+41.4738 +0.0008530897986301222 0.0817264 
+Creating 18 primary user nodes.
+Creating 30 secondary user nodes.
+Starting simulation for 10 s ...
+50.1517 +0.00144064328413536445 0.0500391 
+Creating 20 primary user nodes.
+Creating 30 secondary user nodes.
+Starting simulation for 10 s ...
+46.2675 +0.00218209182456592168 0.0632184 

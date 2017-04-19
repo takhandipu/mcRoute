@@ -1,0 +1,62 @@
+./waf --run "scratch/mcRoute"
+exit
+cd '/home/user/Documents/research/ns-allinone-3.17/ns-3.17'
+./waf --run "scratch/mcRoute"
+cd '/home/user/Documents/research/ns-allinone-3.17/ns-3.17'
+./waf --run "scratch/mcRoute"
+exit
+cd '/home/user/Documents/research/ns-allinone-3.17/ns-3.17'
+./waf --run "scratch/mcRoute"
+cd '/home/user/Documents/research/ns-allinone-3.17/ns-3.17'
+clear
+./waf --run "scratch/mcRoute"
+cd topologies/
+python mine.py 
+cd ..
+cd topologies/
+python mine.py 
+cd ../ns-3.17/
+./waf --run "scratch/mcRoute"
+./waf --run "scratch/mcRoute" >> result.txt
+./waf --run "scratch/mcRoute"
+python mine.py 
+exit
+cd Documents/research/ns-allinone-3.17/
+./waf --run "scratch/mcRoute"
+cd ns-3.17/
+./waf --run "scratch/mcRoute"
+./waf --run "scratch/mcRoute --seed=1 --np=6"
+./waf --run "scratch/mcRoute --seed=1 --np=10"
+exit
+python tmp.py 
+exit
+python tmp.py 
+exit
+cd ..
+./waf --run "scratch/mcRoute --seed=1 --ns=10"
+python tmpSU.py 
+./waf --run "scratch/mcRoute --seed=1"
+python tmpPower.py 
+./waf --run "scratch/mcRoute --seed=1"
+python tmpPower.py 
+./waf --run "scratch/mcRouteComparison"
+./waf --run "scratch/mcRouteComparison --seed=1"
+clear
+python tmpComparison.py 
+./waf --run "scratch/mcRouteVariableTxPower --seed=1"
+./waf --run "scratch/mcRouteVariableTxPower --seed=1 -np=5"
+./waf --run "scratch/mcRouteVariableTxPower --seed=1 -ns=3"
+./waf --run "scratch/mcRouteVariableTxPower --seed=1 -np=3"
+./waf --run "scratch/mcRouteVariableTxPower --seed=1 -np=10"
+./waf --run "scratch/mcRouteVariableTxPower --seed=1 -np=9"
+python tmpAssymetricPU.py 
+exit
+cd Documents/research/ns-allinone-3.17/ns-3.17/
+./waf --run "scratch/mcRouteVariableTxPower --seed=1 --np=5"
+python tmpAssymetricSU.py 
+exit
+pdf2eps
+pdftops
+which pdftops
+cd '/home/user/Downloads/untitled/asymmcRoutePU'
+pdftops

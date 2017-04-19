@@ -1,0 +1,881 @@
+Waf: Entering directory `/home/user/Documents/research/ns-allinone-3.17/ns-3.17/build'
+[   6/1462] install-ns3-header: src/aodv/model/aodv-packet.h -> build/ns3/aodv-packet.h
+[ 704/1462] cxx: scratch/aodv.cc -> build/scratch/aodv.cc.3.o
+[1062/1462] cxx: src/aodv/model/aodv-packet.cc -> build/src/aodv/model/aodv-packet.cc.1.o
+[1064/1462] cxx: src/aodv/model/aodv-routing-protocol.cc -> build/src/aodv/model/aodv-routing-protocol.cc.1.o
+[1065/1462] cxx: src/aodv/helper/aodv-helper.cc -> build/src/aodv/helper/aodv-helper.cc.1.o
+[1440/1462] cxxshlib: build/src/aodv/model/aodv-id-cache.cc.1.o build/src/aodv/model/aodv-dpd.cc.1.o build/src/aodv/model/aodv-rtable.cc.1.o build/src/aodv/model/aodv-rqueue.cc.1.o build/src/aodv/model/aodv-packet.cc.1.o build/src/aodv/model/aodv-neighbor.cc.1.o build/src/aodv/model/aodv-routing-protocol.cc.1.o build/src/aodv/helper/aodv-helper.cc.1.o -> build/libns3.17-aodv-debug.so
+[1445/1462] cxxprogram: build/scratch/scratch-simulator.cc.1.o -> build/scratch/scratch-simulator
+[1446/1462] cxxprogram: build/utils/print-introspected-doxygen.cc.4.o -> build/utils/ns3.17-print-introspected-doxygen-debug
+[1446/1462] cxxprogram: build/utils/test-runner.cc.1.o -> build/utils/ns3.17-test-runner-debug
+[1447/1462] cxxprogram: build/scratch/subdir/scratch-simulator-subdir.cc.2.o -> build/scratch/subdir/subdir
+[1448/1462] cxxprogram: build/scratch/aodv.cc.3.o -> build/scratch/aodv
+Waf: Leaving directory `/home/user/Documents/research/ns-allinone-3.17/ns-3.17/build'
+'build' finished successfully (5.023s)
+[node 0] AodvRoutingProtocol:NotifyAddAddress(0x9963178,  interface , 1,  address , m_local=10.0.0.1; m_mask=255.0.0.0; m_broadcast=10.255.255.255; m_scope=2; m_secondary=0)
+[node 0] AodvRoutingProtocol:NotifyInterfaceUp(0x9963178, 10.0.0.1)
+[node 1] AodvRoutingProtocol:NotifyAddAddress(0x9964270,  interface , 1,  address , m_local=10.0.0.2; m_mask=255.0.0.0; m_broadcast=10.255.255.255; m_scope=2; m_secondary=0)
+[node 1] AodvRoutingProtocol:NotifyInterfaceUp(0x9964270, 10.0.0.2)
+[node 2] AodvRoutingProtocol:NotifyAddAddress(0x9965328,  interface , 1,  address , m_local=10.0.0.3; m_mask=255.0.0.0; m_broadcast=10.255.255.255; m_scope=2; m_secondary=0)
+[node 2] AodvRoutingProtocol:NotifyInterfaceUp(0x9965328, 10.0.0.3)
+[node 0] AodvRoutingProtocol:Start(0x9963178)
+[node 1] AodvRoutingProtocol:Start(0x9964270)
+[node 2] AodvRoutingProtocol:Start(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] AodvRoutingProtocol:LoopbackRoute(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3)
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 0, 10.0.0.3, 03-06-00:00:00:00:00:00)
+[node 0] AodvRoutingProtocol:DeferredRouteOutput(0x9963178, 0x996a928, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 0 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.1 > 10.0.0.3)
+[node 0] Add packet 0 to queue. Protocol 1
+[node 0] Send new RREQ for outbound packet to 10.0.0.3
+[node 0] AodvRoutingProtocol:SendRequest(0x9963178, 10.0.0.3)
+[node 0] Send RREQ with id 1 to socket
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:ScheduleRreqRetry(0x9963178, 10.0.0.3)
+[node 0] Scheduled RREQ retry in 2.8 seconds
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 2, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 2
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.1 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.1,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvRequest(0x9964270)
+[node 1] 10.0.0.2 receive RREQ with hop count 1 ID 1 to destination 10.0.0.3
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 3, 10.255.255.255, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.2)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Broadcast local delivery to 10.0.0.1
+[node 0] TTL exceeded. Drop packet 3
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 3, 10.255.255.255, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.2)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Broadcast local delivery to 10.0.0.3
+[node 2] TTL exceeded. Drop packet 3
+[node 0] AodvRoutingProtocol:RecvAodv(0x9963178, 0x9966880)
+[node 0] AODV node 0x9963178 received a AODV packet from 10.0.0.2 to 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9963178, sender , 10.0.0.2,  receiver , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RecvRequest(0x9963178)
+[node 0] Ignoring RREQ due to duplicate
+[node 2] AodvRoutingProtocol:RecvAodv(0x9965328, 0x9967bb8)
+[node 2] AODV node 0x9965328 received a AODV packet from 10.0.0.2 to 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9965328, sender , 10.0.0.2,  receiver , 10.0.0.3)
+[node 2] AodvRoutingProtocol:RecvRequest(0x9965328)
+[node 2] 10.0.0.3 receive RREQ with hop count 2 ID 1 to destination 10.0.0.3
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.3)
+[node 2] Send reply since I am the destination
+[node 2] AodvRoutingProtocol:SendReply(0x9965328, 10.0.0.1)
+[node 2] AodvRoutingProtocol:FindSocketWithInterfaceAddress(0x9965328, m_local=10.0.0.3; m_mask=255.0.0.0; m_broadcast=10.255.255.255; m_scope=2; m_secondary=0)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.2, 0)
+[node 2] Exist route to 10.0.0.2 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 4, 10.0.0.2, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Unicast local delivery to 10.0.0.2
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.3 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.3,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.3)
+[node 1] RREP destination 10.0.0.3 RREP origin 10.0.0.1
+[node 1] receiver 10.0.0.2 origin 10.0.0.1
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:FindSocketWithInterfaceAddress(0x9964270, m_local=10.0.0.2; m_mask=255.0.0.0; m_broadcast=10.255.255.255; m_scope=2; m_secondary=0)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.1, 0)
+[node 1] Exist route to 10.0.0.1 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 12, 10.0.0.1, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.2)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Unicast local delivery to 10.0.0.1
+[node 0] AodvRoutingProtocol:RecvAodv(0x9963178, 0x9966880)
+[node 0] AODV node 0x9963178 received a AODV packet from 10.0.0.2 to 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9963178, sender , 10.0.0.2,  receiver , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RecvReply(0x9963178,  src , 10.0.0.2)
+[node 0] RREP destination 10.0.0.3 RREP origin 10.0.0.1
+[node 0] receiver 10.0.0.1 origin 10.0.0.1
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.1)
+[node 0] AodvRoutingProtocol:SendPacketFromQueue(0x9963178)
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 0, 10.0.0.3, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.3 from 10.0.0.1 packet 0
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 0, 10.0.0.3, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.1)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Unicast local delivery to 10.0.0.3
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 1 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.3 > 10.0.0.1, 0)
+[node 2] Exist route to 10.0.0.1 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 37, 10.0.0.1, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.1 from 10.0.0.3 packet 37
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 37, 10.0.0.1, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.3)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Unicast local delivery to 10.0.0.1
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 45, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 45
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.3 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.3,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.3)
+[node 1] RREP destination 10.0.0.3 RREP origin 10.0.0.3
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.3)
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 46, 10.255.255.255, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.2)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Broadcast local delivery to 10.0.0.1
+[node 0] TTL exceeded. Drop packet 46
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 46, 10.255.255.255, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.2)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Broadcast local delivery to 10.0.0.3
+[node 2] TTL exceeded. Drop packet 46
+[node 0] AodvRoutingProtocol:RecvAodv(0x9963178, 0x9966880)
+[node 0] AODV node 0x9963178 received a AODV packet from 10.0.0.2 to 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9963178, sender , 10.0.0.2,  receiver , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RecvReply(0x9963178,  src , 10.0.0.2)
+[node 0] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 0] AodvRoutingProtocol:ProcessHello(0x9963178, from , 10.0.0.2)
+[node 2] AodvRoutingProtocol:RecvAodv(0x9965328, 0x9967bb8)
+[node 2] AODV node 0x9965328 received a AODV packet from 10.0.0.2 to 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9965328, sender , 10.0.0.2,  receiver , 10.0.0.3)
+[node 2] AodvRoutingProtocol:RecvReply(0x9965328,  src , 10.0.0.2)
+[node 2] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 2] AodvRoutingProtocol:ProcessHello(0x9965328, from , 10.0.0.2)
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 47, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 47
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.1 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.1,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.1)
+[node 1] RREP destination 10.0.0.1 RREP origin 10.0.0.1
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] Exist route to 10.0.0.3 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 48, 10.0.0.3, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.3 from 10.0.0.1 packet 48
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 48, 10.0.0.3, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.1)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Unicast local delivery to 10.0.0.3
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 3 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.3 > 10.0.0.1, 0)
+[node 2] Exist route to 10.0.0.1 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 55, 10.0.0.1, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.1 from 10.0.0.3 packet 55
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 55, 10.0.0.1, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.3)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Unicast local delivery to 10.0.0.1
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 63, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 63
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.3 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.3,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.3)
+[node 1] RREP destination 10.0.0.3 RREP origin 10.0.0.3
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.3)
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 64, 10.255.255.255, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.2)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Broadcast local delivery to 10.0.0.1
+[node 0] TTL exceeded. Drop packet 64
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 64, 10.255.255.255, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.2)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Broadcast local delivery to 10.0.0.3
+[node 2] TTL exceeded. Drop packet 64
+[node 0] AodvRoutingProtocol:RecvAodv(0x9963178, 0x9966880)
+[node 0] AODV node 0x9963178 received a AODV packet from 10.0.0.2 to 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9963178, sender , 10.0.0.2,  receiver , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RecvReply(0x9963178,  src , 10.0.0.2)
+[node 0] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 0] AodvRoutingProtocol:ProcessHello(0x9963178, from , 10.0.0.2)
+[node 2] AodvRoutingProtocol:RecvAodv(0x9965328, 0x9967bb8)
+[node 2] AODV node 0x9965328 received a AODV packet from 10.0.0.2 to 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9965328, sender , 10.0.0.2,  receiver , 10.0.0.3)
+[node 2] AodvRoutingProtocol:RecvReply(0x9965328,  src , 10.0.0.2)
+[node 2] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 2] AodvRoutingProtocol:ProcessHello(0x9965328, from , 10.0.0.2)
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 65, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 65
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.1 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.1,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.1)
+[node 1] RREP destination 10.0.0.1 RREP origin 10.0.0.1
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] Exist route to 10.0.0.3 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 66, 10.0.0.3, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.3 from 10.0.0.1 packet 66
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 66, 10.0.0.3, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.1)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Unicast local delivery to 10.0.0.3
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 5 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.3 > 10.0.0.1, 0)
+[node 2] Exist route to 10.0.0.1 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 73, 10.0.0.1, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.1 from 10.0.0.3 packet 73
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 73, 10.0.0.1, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.3)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Unicast local delivery to 10.0.0.1
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 81, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 81
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.3 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.3,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.3)
+[node 1] RREP destination 10.0.0.3 RREP origin 10.0.0.3
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.3)
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 82, 10.255.255.255, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.2)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Broadcast local delivery to 10.0.0.1
+[node 0] TTL exceeded. Drop packet 82
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 82, 10.255.255.255, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.2)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Broadcast local delivery to 10.0.0.3
+[node 2] TTL exceeded. Drop packet 82
+[node 0] AodvRoutingProtocol:RecvAodv(0x9963178, 0x9966880)
+[node 0] AODV node 0x9963178 received a AODV packet from 10.0.0.2 to 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9963178, sender , 10.0.0.2,  receiver , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RecvReply(0x9963178,  src , 10.0.0.2)
+[node 0] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 0] AodvRoutingProtocol:ProcessHello(0x9963178, from , 10.0.0.2)
+[node 2] AodvRoutingProtocol:RecvAodv(0x9965328, 0x9967bb8)
+[node 2] AODV node 0x9965328 received a AODV packet from 10.0.0.2 to 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9965328, sender , 10.0.0.2,  receiver , 10.0.0.3)
+[node 2] AodvRoutingProtocol:RecvReply(0x9965328,  src , 10.0.0.2)
+[node 2] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 2] AodvRoutingProtocol:ProcessHello(0x9965328, from , 10.0.0.2)
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 83, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 83
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.1 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.1,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.1)
+[node 1] RREP destination 10.0.0.1 RREP origin 10.0.0.1
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] Exist route to 10.0.0.3 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 84, 10.0.0.3, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.3 from 10.0.0.1 packet 84
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 84, 10.0.0.3, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.1)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Unicast local delivery to 10.0.0.3
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 7 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.3 > 10.0.0.1, 0)
+[node 2] Exist route to 10.0.0.1 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.1, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 91, 10.0.0.1, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:Forwarding(0x9964270)
+[node 1] 10.0.0.2 forwarding to 10.0.0.1 from 10.0.0.3 packet 91
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 91, 10.0.0.1, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.3)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Unicast local delivery to 10.0.0.1
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 99, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.3, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 99
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.3 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.3,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.3)
+[node 1] RREP destination 10.0.0.3 RREP origin 10.0.0.3
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.3)
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 100, 10.255.255.255, 03-06-00:00:00:00:00:01)
+[node 0] AodvRoutingProtocol:IsMyOwnAddress(0x9963178, 10.0.0.2)
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] Broadcast local delivery to 10.0.0.1
+[node 0] TTL exceeded. Drop packet 100
+[node 2] AodvRoutingProtocol:RouteInput(0x9965328, 100, 10.255.255.255, 03-06-00:00:00:00:00:03)
+[node 2] AodvRoutingProtocol:IsMyOwnAddress(0x9965328, 10.0.0.2)
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.0.0.2, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] Broadcast local delivery to 10.0.0.3
+[node 2] TTL exceeded. Drop packet 100
+[node 0] AodvRoutingProtocol:RecvAodv(0x9963178, 0x9966880)
+[node 0] AODV node 0x9963178 received a AODV packet from 10.0.0.2 to 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9963178, sender , 10.0.0.2,  receiver , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RecvReply(0x9963178,  src , 10.0.0.2)
+[node 0] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 0] AodvRoutingProtocol:ProcessHello(0x9963178, from , 10.0.0.2)
+[node 2] AodvRoutingProtocol:RecvAodv(0x9965328, 0x9967bb8)
+[node 2] AODV node 0x9965328 received a AODV packet from 10.0.0.2 to 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9965328, sender , 10.0.0.2,  receiver , 10.0.0.3)
+[node 2] AodvRoutingProtocol:RecvReply(0x9965328,  src , 10.0.0.2)
+[node 2] RREP destination 10.0.0.2 RREP origin 10.0.0.2
+[node 2] AodvRoutingProtocol:ProcessHello(0x9965328, from , 10.0.0.2)
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 1] AodvRoutingProtocol:RouteInput(0x9964270, 101, 10.255.255.255, 03-06-00:00:00:00:00:02)
+[node 1] AodvRoutingProtocol:IsMyOwnAddress(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] Broadcast local delivery to 10.0.0.2
+[node 1] TTL exceeded. Drop packet 101
+[node 1] AodvRoutingProtocol:RecvAodv(0x9964270, 0x99671f0)
+[node 1] AODV node 0x9964270 received a AODV packet from 10.0.0.1 to 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteToNeighbor(0x9964270, sender , 10.0.0.1,  receiver , 10.0.0.2)
+[node 1] AodvRoutingProtocol:RecvReply(0x9964270,  src , 10.0.0.1)
+[node 1] RREP destination 10.0.0.1 RREP origin 10.0.0.1
+[node 1] AodvRoutingProtocol:ProcessHello(0x9964270, from , 10.0.0.1)
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] Exist route to 10.0.0.3 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.3, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.0.0.2, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:SendRerrWhenBreaksLinkToNextHop(0x9963178, 10.0.0.2)
+[node 0] AodvRoutingProtocol:SendRerrMessage(0x9963178)
+[node 0] No precursors
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] AodvRoutingProtocol:LoopbackRoute(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3)
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 115, 10.0.0.3, 03-06-00:00:00:00:00:00)
+[node 0] AodvRoutingProtocol:DeferredRouteOutput(0x9963178, 0x996bb58, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 11 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.1 > 10.0.0.3)
+[node 0] Add packet 115 to queue. Protocol 1
+[node 0] Send new RREQ for outbound packet to 10.0.0.3
+[node 0] AodvRoutingProtocol:SendRequest(0x9963178, 10.0.0.3)
+[node 0] Send RREQ with id 2 to socket
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:ScheduleRreqRetry(0x9963178, 10.0.0.3)
+[node 0] Scheduled RREQ retry in 2.8 seconds
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] AodvRoutingProtocol:LoopbackRoute(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3)
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 121, 10.0.0.3, 03-06-00:00:00:00:00:00)
+[node 0] AodvRoutingProtocol:DeferredRouteOutput(0x9963178, 0x9964628, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 14 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.1 > 10.0.0.3)
+[node 0] Add packet 121 to queue. Protocol 1
+[node 1] AodvRoutingProtocol:SendRerrWhenBreaksLinkToNextHop(0x9964270, 10.0.0.3)
+[node 1] AodvRoutingProtocol:SendRerrMessage(0x9964270)
+[node 1] AodvRoutingProtocol:FindSocketWithInterfaceAddress(0x9964270, m_local=10.0.0.2; m_mask=255.0.0.0; m_broadcast=10.255.255.255; m_scope=2; m_secondary=0)
+[node 1] one precursor => unicast RERR to 10.0.0.1 from 10.0.0.2
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.1, 0)
+[node 1] Exist route to 10.0.0.1 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.0.0.1, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:SendRerrWhenBreaksLinkToNextHop(0x9964270, 10.0.0.1)
+[node 1] AodvRoutingProtocol:SendRerrMessage(0x9964270)
+[node 2] AodvRoutingProtocol:SendRerrWhenBreaksLinkToNextHop(0x9965328, 10.0.0.2)
+[node 2] AodvRoutingProtocol:SendRerrMessage(0x9965328)
+[node 2] No precursors
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] AodvRoutingProtocol:LoopbackRoute(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3)
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 136, 10.0.0.3, 03-06-00:00:00:00:00:00)
+[node 0] AodvRoutingProtocol:DeferredRouteOutput(0x9963178, 0x996ba40, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 16 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.1 > 10.0.0.3)
+[node 0] Add packet 136 to queue. Protocol 1
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] 0x9963178
+[node 0] Resend RREQ to 10.0.0.3 ttl 35
+[node 0] AodvRoutingProtocol:SendRequest(0x9963178, 10.0.0.3)
+[node 0] Send RREQ with id 3 to socket
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:ScheduleRreqRetry(0x9963178, 10.0.0.3)
+[node 0] Scheduled RREQ retry in 5.6 seconds
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] AodvRoutingProtocol:LoopbackRoute(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3)
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 142, 10.0.0.3, 03-06-00:00:00:00:00:00)
+[node 0] AodvRoutingProtocol:DeferredRouteOutput(0x9963178, 0x996c320, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 19 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.1 > 10.0.0.3)
+[node 0] Add packet 142 to queue. Protocol 1
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9963178)
+[node 1] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9964270)
+[node 2] AodvRoutingProtocol:RreqRateLimitTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:RerrRateLimitTimerExpire(0x9965328)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3, 0)
+[node 0] AodvRoutingProtocol:LoopbackRoute(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 1 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.0.0.3)
+[node 0] AodvRoutingProtocol:RouteInput(0x9963178, 147, 10.0.0.3, 03-06-00:00:00:00:00:00)
+[node 0] AodvRoutingProtocol:DeferredRouteOutput(0x9963178, 0x996a698, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 21 protocol 1 offset (bytes) 0 flags [none] length: 84 10.0.0.1 > 10.0.0.3)
+[node 0] Add packet 147 to queue. Protocol 1
+[node 2] AodvRoutingProtocol:HelloTimerExpire(0x9965328)
+[node 2] AodvRoutingProtocol:SendHello(0x9965328)
+[node 2] AodvRoutingProtocol:RouteOutput(0x9965328, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 2] Exist route to 10.255.255.255 from interface 10.0.0.3
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 2] AodvRoutingProtocol:UpdateRouteLifeTime(0x9965328, 10.255.255.255, +3000000000.0ns)
+[node 2] Updating VALID route
+[node 1] AodvRoutingProtocol:HelloTimerExpire(0x9964270)
+[node 1] AodvRoutingProtocol:SendHello(0x9964270)
+[node 1] AodvRoutingProtocol:RouteOutput(0x9964270, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 1] Exist route to 10.255.255.255 from interface 10.0.0.2
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 1] AodvRoutingProtocol:UpdateRouteLifeTime(0x9964270, 10.255.255.255, +3000000000.0ns)
+[node 1] Updating VALID route
+[node 0] AodvRoutingProtocol:HelloTimerExpire(0x9963178)
+[node 0] AodvRoutingProtocol:SendHello(0x9963178)
+[node 0] AodvRoutingProtocol:RouteOutput(0x9963178, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.255.255.255, 0)
+[node 0] Exist route to 10.255.255.255 from interface 10.0.0.1
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+[node 0] AodvRoutingProtocol:UpdateRouteLifeTime(0x9963178, 10.255.255.255, +3000000000.0ns)
+[node 0] Updating VALID route
+Creating 3 nodes 100 m apart.
+Starting simulation for 10 s ...
+PING  10.0.0.3 56(84) bytes of data.
+64 bytes from 10.0.0.3: icmp_seq=0 ttl=63 time=5 ms
+64 bytes from 10.0.0.3: icmp_seq=1 ttl=63 time=1 ms
+64 bytes from 10.0.0.3: icmp_seq=2 ttl=63 time=1 ms
+64 bytes from 10.0.0.3: icmp_seq=3 ttl=63 time=1 ms
+--- 10.0.0.3 ping statistics ---
+10 packets transmitted, 4 received, 60% packet loss, time 9999ms
+rtt min/avg/max/mdev = 1/2/5/2 ms

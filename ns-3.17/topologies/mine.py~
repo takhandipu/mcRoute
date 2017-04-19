@@ -1,0 +1,10 @@
+'''
+10 10 30 5000 5000
+'''
+time = 10
+su = 30
+nRow = 5000
+nCol = 5000
+for pu in range(5, 11):
+    log = open(pu+".txt", "w")
+    print >>log, time, pu, su, nRow, nCol
